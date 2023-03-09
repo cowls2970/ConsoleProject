@@ -6,54 +6,55 @@ public class FinalBoard {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		Board board = new Board();
+		System.out.println("lol");
 
-		// °Ô½ÃÆÇÀÇ Ãâ·Â ¸í·É ¹øÈ£
+		// ê²Œì‹œíŒì˜ ì¶œë ¥ ëª…ë ¹ ë²ˆí˜¸
 		while (true) {
-			System.out.println("==== °Ô½ÃÆÇ ====");
-			System.out.println("1. °Ô½Ã±Û µî·Ï");
-			System.out.println("2. °Ô½Ã±Û »èÁ¦");
-			System.out.println("3. °Ô½Ã±Û ¸ñ·Ï º¸±â");
-			System.out.println("0. Á¾·á");
-			System.out.println("¼ıÀÚ¸¸ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+			System.out.println("==== ê²Œì‹œíŒ ====");
+			System.out.println("1. ê²Œì‹œê¸€ ë“±ë¡");
+			System.out.println("2. ê²Œì‹œê¸€ ì‚­ì œ");
+			System.out.println("3. ê²Œì‹œê¸€ ëª©ë¡ ë³´ê¸°");
+			System.out.println("0. ì¢…ë£Œ");
+			System.out.println("ìˆ«ìë§Œ ì…ë ¥í•´ì£¼ì„¸ìš”");
 			
-			try {  // ¿À·ù ¹ß»ı½Ã Ã³À½À¸·Î
+			try {  // ì˜¤ë¥˜ ë°œìƒì‹œ ì²˜ìŒìœ¼ë¡œ
 				
 				int menu = sc.nextInt();
 
-				if (menu == 1) { // °Ô½Ã±Û µî·Ï
-					System.out.println("Á¦¸ñÀ» ÀÔ·ÂÇÏ¼¼¿ä.");
-					sc.nextLine(); // '\n'À» ¹ö¸®±â À§ÇØ Ãß°¡
+				if (menu == 1) { // ê²Œì‹œê¸€ ë“±ë¡
+					System.out.println("ì œëª©ì„ ì…ë ¥í•˜ì„¸ìš”.");
+					sc.nextLine(); // '\n'ì„ ë²„ë¦¬ê¸° ìœ„í•´ ì¶”ê°€
 					String title = sc.nextLine();
-					System.out.println("³»¿ëÀ» ÀÔ·ÂÇÏ¼¼¿ä.");
+					System.out.println("ë‚´ìš©ì„ ì…ë ¥í•˜ì„¸ìš”.");
 					String content = sc.nextLine();
-					int id = board.getPosts().size() + 1; // °Ô½Ã±Û ID´Â ÇöÀç °Ô½Ã±Û °³¼ö + 1·Î ¼³Á¤
+					int id = board.getPosts().size() + 1; // ê²Œì‹œê¸€ IDëŠ” í˜„ì¬ ê²Œì‹œê¸€ ê°œìˆ˜ + 1ë¡œ ì„¤ì •
 					Board2 post = new Board2(id, title, content);
 					board.addPost(post);
-					System.out.println("°Ô½Ã±ÛÀÌ µî·ÏµÇ¾ú½À´Ï´Ù. ID: " + id);
-					System.out.println(); // ºó ÁÙ Ãß°¡
-				} else if (menu == 2) { // °Ô½Ã±Û »èÁ¦
-					System.out.println("»èÁ¦ÇÒ °Ô½Ã±Û ID¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+					System.out.println("ê²Œì‹œê¸€ì´ ë“±ë¡ë˜ì—ˆìŠµë‹ˆë‹¤. ID: " + id);
+					System.out.println(); // ë¹ˆ ì¤„ ì¶”ê°€
+				} else if (menu == 2) { // ê²Œì‹œê¸€ ì‚­ì œ
+					System.out.println("ì‚­ì œí•  ê²Œì‹œê¸€ IDë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 					int id = sc.nextInt();
 					board.deletePost(id);
-					System.out.println("°Ô½Ã±ÛÀÌ »èÁ¦µÇ¾ú½À´Ï´Ù.");
-					System.out.println(); // ºó ÁÙ Ãß°¡
-				} else if (menu == 3) { // °Ô½Ã±Û ¸ñ·Ï º¸±â
+					System.out.println("ê²Œì‹œê¸€ì´ ì‚­ì œë˜ì—ˆìŠµë‹ˆë‹¤.");
+					System.out.println(); // ë¹ˆ ì¤„ ì¶”ê°€
+				} else if (menu == 3) { // ê²Œì‹œê¸€ ëª©ë¡ ë³´ê¸°
 					board.showPosts();
-					System.out.println(); // ºó ÁÙ Ãß°¡
-				} else if (menu == 0) { // Á¾·á
-					System.out.println("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
+					System.out.println(); // ë¹ˆ ì¤„ ì¶”ê°€
+				} else if (menu == 0) { // ì¢…ë£Œ
+					System.out.println("í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 					break;
-					// break ·Î ÇØ´ç ÇÁ·Î±×·¥À» Á¾·áÇÑ´Ù.
+					// break ë¡œ í•´ë‹¹ í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•œë‹¤.
 				} else {
-					System.out.println("Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.");
-					System.out.println(); // ºó ÁÙ Ãß°¡
-					continue; // Ã³À½À¸·Î µ¹¾Æ°£´Ù.
+					System.out.println("ì˜ëª»ëœ ì…ë ¥ì…ë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”.");
+					System.out.println(); // ë¹ˆ ì¤„ ì¶”ê°€
+					continue; // ì²˜ìŒìœ¼ë¡œ ëŒì•„ê°„ë‹¤.
 				}
-			} catch (InputMismatchException e) { // ¿À·ù½Ã Ã³À½À¸·Î µ¹¾Æ°£´Ù.
-				System.out.println("Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			} catch (InputMismatchException e) { // ì˜¤ë¥˜ì‹œ ì²˜ìŒìœ¼ë¡œ ëŒì•„ê°„ë‹¤.
+				System.out.println("ì˜ëª»ëœ ì…ë ¥ì…ë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 				System.out.println();
-				sc.nextLine(); // ÀÔ·Â ¹öÆÛ¸¦ ºñ¿öÁÜ
-				continue; // while¹®ÀÇ Ã³À½À¸·Î µ¹¾Æ°¨}
+				sc.nextLine(); // ì…ë ¥ ë²„í¼ë¥¼ ë¹„ì›Œì¤Œ
+				continue; // whileë¬¸ì˜ ì²˜ìŒìœ¼ë¡œ ëŒì•„ê°}
 			}
 		}
 	}
