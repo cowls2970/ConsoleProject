@@ -8,10 +8,8 @@ public class FinalBoard {
 		Board board = new Board();
 		System.out.println("lol");
 		System.out.println("lol");
-		System.out.println("lol");
-		System.out.println("lol");
-		System.out.println("lol");
-		System.out.println("lol");
+		System.out.println("dsfdsfdsfsdfsdf");
+
 
 		// 寃뚯떆�뙋�쓽 異쒕젰 紐낅졊 踰덊샇
 		while (true) {
