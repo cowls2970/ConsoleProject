@@ -7,6 +7,11 @@ public class FinalBoard {
 		Scanner sc = new Scanner(System.in);
 		Board board = new Board();
 		System.out.println("lol");
+		System.out.println("lol");
+		System.out.println("lol");
+		System.out.println("lol");
+		System.out.println("lol");
+		System.out.println("lol");
 
 		// 게시판의 출력 명령 번호
 		while (true) {
